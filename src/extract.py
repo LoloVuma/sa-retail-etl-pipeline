@@ -12,3 +12,21 @@ RAW_FILE = (
     / "raw"
     / "RETAIL TRADE SALES 2008 ONWARDS2 (2).csv"
 )
+
+
+def main():
+    print("Starting data extraction...")
+
+    if not RAW_FILE.exists():
+        print(f"Error: CSV file not found: {RAW_FILE}")
+        return
+
+    df = pd.read_csv(RAW_FILE)
+
+    print("CSV loaded successfully!")
+    print(f"Rows: {df.shape[0]}")
+    print(f"Columns: {df.shape[1]}")
+
+
+if __name__ == "__main__":
+    main()
