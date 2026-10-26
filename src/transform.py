@@ -41,6 +41,15 @@ def main():
     print("\nStandardised column names:")
     print(df.columns.tolist())
 
+    # Convert the date column to datetime
+    df["date"] = pd.to_datetime(df["date"], errors="raise")
+
+    print("\nDate column data type:")
+    print(df["date"].dtype)
+
+    print("\nFirst five dates:")
+    print(df["date"].head().to_list())
+
 
 if __name__ == "__main__":
     main()
