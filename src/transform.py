@@ -50,6 +50,27 @@ def main():
     print("\nFirst five dates:")
     print(df["date"].head().to_list())
 
+    # Check numeric column data types
+    print("\nNumeric column data types:")
+    print(df[["month_num", "year", "sales_r_millions"]].dtypes)
+
+    # Check for missing values
+    print("\nMissing values per column:")
+    print(df.isnull().sum())
+
+    # Check for duplicate rows
+    print("\nDuplicate rows:")
+    print(df.duplicated().sum())
+
+    # Save the cleaned dataset
+    output_dir = PROJECT_DIR / "data" / "processed"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    output_file = output_dir / "cleaned_retail_sales.csv"
+    df.to_csv(output_file, index=False)
+
+    print(f"\nCleaned dataset saved to: {output_file}")
+
 
 if __name__ == "__main__":
     main()
