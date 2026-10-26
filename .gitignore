@@ -3,6 +3,5 @@ __pycache__/
 *.pyc
 .env
 *.log
-data/raw/
-data/processed/
+data/
 .DS_Store
