@@ -106,3 +106,6 @@ Generated data files and the SQLite database are excluded from version control t
 - Complete the Power BI dashboard with key performance indicators, category comparisons, and monthly sales trends.
 - Document the meaning and units of the source sales measure.
 - Add dashboard screenshots and final findings to this README.
+
+Verification code:
+WTC-NNP9BGZV
